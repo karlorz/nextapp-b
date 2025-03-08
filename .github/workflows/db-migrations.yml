@@ -11,6 +11,7 @@ on:
     paths:
       - 'src/drizzle/schema.ts'
       - 'migrations/**'
+  workflow_dispatch: null
 
 jobs:
   migrations:
