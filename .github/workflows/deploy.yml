@@ -40,3 +40,4 @@ jobs:
         with:
           folder: dist
           token: ${{ secrets.GITHUB_TOKEN }}
+          clean: true
