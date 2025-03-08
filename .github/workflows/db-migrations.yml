@@ -39,12 +39,12 @@ jobs:
         run: pnpm install
 
       - name: Generate migration
-        run: pnpm drizzle-kit generate:pg
+        run: pnpm db:generate
 
       - name: Apply migrations
         run: |
           if [[ "${{ github.event_name }}" == "push" ]]; then
             pnpm db:push
           else
-            pnpm drizzle-kit check:pg
+            pnpm drizzle-kit check
           fi
